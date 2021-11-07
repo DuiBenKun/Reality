@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public float Speed;
     public float JumpForce; 
-    private Rigidbody2D RB2D;          //[SerializeField]:  可将 成员变量 在Inspector中显示，并且定义Serialize关系;
+     private Rigidbody2D RB2D;          //[SerializeField]:  可将 成员变量 在Inspector中显示，并且定义Serialize关系;
     private Animator Animator;
     public Collider2D Coll;
     public LayerMask Ground;
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Movement();
         SwitchAnimator();
@@ -37,12 +37,11 @@ public class PlayerController : MonoBehaviour
         if (HorizontalMove != 0)                      //HorizontalMove !=0 则有移动
         {
             //默认以右移动，具体看HorizontalMove的值为正为负；
-            RB2D.velocity = new Vector2(HorizontalMove * Speed * Time.deltaTime , RB2D.velocity.y);
-            //rigidbody.velocity 速度向量
+            RB2D.velocity = new Vector2(HorizontalMove * Speed * Time.deltaTime, RB2D.velocity.y);       //rigidbody.velocity 速度向量
 
-            /*（移动替代方法）
+            /**（移动替代方法）
             * 移动，方向 * 上一帧花费的时间 * 玩家按键
-            * transform.Translate(transform.right * Time.deltaTime * HorizontalMove * Speed);
+            * transform.Translate(transform.right * Time.deltaTime * HorizontalMove * speed);
             **/
 
             Animator.SetBool("idle", false);
@@ -62,7 +61,7 @@ public class PlayerController : MonoBehaviour
         //jump
         if (Input.GetButtonDown("Jump") && Coll.IsTouchingLayers(Ground) )
         {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * JumpForce );
+            RB2D.velocity = new Vector2(RB2D.velocity.x, JumpForce * Time.deltaTime);
             Animator.SetBool("jump", true);
         }
         
@@ -102,15 +101,7 @@ public class PlayerController : MonoBehaviour
         */
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if( collision.gameObject.tag == "Collection" )
-        {
-            //UIManager.Instance.Point += 1;
-            Destroy(collision.gameObject);
-            //AudioManager.Instance.Play();
-        }
-    }
+
 
 
 
