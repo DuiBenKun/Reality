@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Collection
+  - Ladder
+  - House
+  - Barrier
   layers:
   - Default
   - TransparentFX
@@ -14,8 +18,8 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
+  - Ladder
+  - Barrier
   - 
   - 
   - 
@@ -44,6 +48,15 @@ TagManager:
   - name: Back
     uniqueID: 1217165631
     locked: 0
+  - name: Environment
+    uniqueID: 2506035263
+    locked: 0
+  - name: Player
+    uniqueID: 614403757
+    locked: 0
   - name: Front
     uniqueID: 2889459551
+    locked: 0
+  - name: Ground
+    uniqueID: 1616433153
     locked: 0
