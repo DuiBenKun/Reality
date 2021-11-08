@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1435675986920975727}
   - component: {fileID: 1435675986920975760}
   - component: {fileID: 1435675986920975763}
+  - component: {fileID: 6895826018489612140}
   - component: {fileID: 1435675986920975724}
   - component: {fileID: 1435675986920975725}
   - component: {fileID: 1435675986920975762}
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1405507745
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 72de0c64f2c6a498096698322c976a67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -126,6 +127,34 @@ CapsuleCollider2D:
   m_Offset: {x: -0.07554054, y: -0.6176634}
   m_Size: {x: 0.7383003, y: 0.82717323}
   m_Direction: 0
+--- !u!60 &6895826018489612140
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435675986920975720}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.0625, y: 2}
+    newSize: {x: 2.0625, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.44446945, y: -0.766101}
+      - {x: 0.4157753, y: -0.7966083}
+      - {x: -0.037132263, y: 0.28193557}
 --- !u!50 &1435675986920975724
 Rigidbody2D:
   serializedVersion: 4
@@ -159,12 +188,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d53bfae417bd2147913cc07feb8d131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 8
   JumpForce: 17
   Coll: {fileID: 1435675986920975763}
+  BoxColl: {fileID: 0}
+  CirColl: {fileID: 0}
   Ground:
     serializedVersion: 2
     m_Bits: 256
+  Ladder:
+    serializedVersion: 2
+    m_Bits: 0
+  Barrier:
+    serializedVersion: 2
+    m_Bits: 0
+  Cherry: 0
 --- !u!95 &1435675986920975762
 Animator:
   serializedVersion: 3
