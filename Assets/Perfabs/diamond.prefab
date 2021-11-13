@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7738891687697783282}
   - component: {fileID: 3530082628072704883}
   - component: {fileID: 2969864739582325859}
+  - component: {fileID: 1664917810681336427}
   m_Layer: 0
   m_Name: diamond
-  m_TagString: Untagged
+  m_TagString: Collection1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,3 +100,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &1664917810681336427
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4538452758330937598}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.9375, y: 0.8125}
+    newSize: {x: 0.9375, y: 0.8125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.17755318, y: 0.30970383}
+      - {x: -0.3596897, y: 0.08496094}
+      - {x: -0.0045833588, y: -0.30434036}
+      - {x: 0.3683014, y: 0.07632446}
+      - {x: 0.1957922, y: 0.31029892}
