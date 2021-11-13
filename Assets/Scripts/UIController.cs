@@ -8,12 +8,13 @@ public class UIController : MonoBehaviour
 {
     // 单例模式
     public static UIController Instance;
-    // 金币UI 文本组件
+    // 收集物UI 文本组件
     private Text cherryText;
-    // 当前金币数量
+    //private Text diamondText;
+    // 当前收集物数量
     private int cherryNum;
-
-    // 金币数量的属性，修改时候自动更新UI
+    //private int diamondNum;
+    // 樱桃数量的属性，修改时候自动更新UI
     public int CherryNum
     {
         get => cherryNum;
@@ -26,13 +27,26 @@ public class UIController : MonoBehaviour
         }
     }
 
+    //钻石数量的属性，修改时自动更新UI
+    /*
+    public int DiamondNum
+    {
+        get => diamondNum;
+        set
+        {
+            diamondNum = value;
+            diamondText.text = "x " + diamondNum;
+        }
+    }
+    */
+
     // 游戏一开始就执行
     private void Awake()
     {
         Instance = this;
-        // 金币的Text组件查找
+        // 樱桃的Text组件查找
         cherryText = transform.Find("cherry/cherryText").GetComponent<Text>();
-
+        //diamondText = transform.Find("diamond/diamondText").GetComponent<Text>();
     }
 
 }

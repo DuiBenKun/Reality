@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     public BoxCollider2D BoxColl;
     public CircleCollider2D CirColl;
     public LayerMask Ground;
-    public int Cherry = 0;
     private bool IsTouchingBarrier = false;
 
     // Start is called before the first frame update
@@ -142,13 +141,22 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Collection")
         {
             UIController.Instance.CherryNum += 1;
-            Cherry += 1;
             Destroy(collision.gameObject);
             //AudioManager.Instance.Play();
         }
-        
+        /*
+        if(collision.gameObject.tag == "Collection1")
+        {
+            UIController.Instance.DiamondNum += 1;
+            Destroy(collision.gameObject);
+
+
+        }
+        */
+
     }
     
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Barrier")
