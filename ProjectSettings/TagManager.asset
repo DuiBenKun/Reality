@@ -8,6 +8,9 @@ TagManager:
   - Ladder
   - House
   - Barrier
+  - Collection1
+  - Platform
+  - Trigger
   layers:
   - Default
   - TransparentFX
